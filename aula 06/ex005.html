@@ -1,0 +1,41 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(66, 138, 255);
+            color: white;
+            font: normal 18pt arial;
+            
+        }
+
+        #msg:hover {
+            background-color: rgb(160, 134, 255);
+            color: rgb(255, 0, 0);
+            width: 250px;
+            border: 2px solid white;
+            border-radius: 10px;
+            text-align: center;
+            transition: .5s;
+            text-shadow: 2px 2px 2px black;
+        }
+    </style>
+</head>
+<body>
+   <h1>Iniciando estudo DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o<strong> DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var p1 = document.getElementsByTagName('strong')[0]
+        var corpo = document.body
+        var d = document.getElementById('msg')
+        p1.style.color = 'red'
+        corpo.style.background = 'black'
+        d.innerText = 'Estou aguardando ...'
+    </script>
+</body>
+</html>

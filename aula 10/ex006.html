@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #container {
+            position: relative;
+            background-image: url(target001.png);
+            background-size: 100% 100%;
+            background-color: aquamarine;
+            height: 500px;
+            
+            
+        }
+        #area {
+            position: absolute;
+            font: normal 15pt arial;
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% ,-50%);
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <div id="area">
+            Interaja...
+        </div>
+        <script>
+            var a = document.getElementById('area')
+            a.addEventListener('click', clicar)
+            a.addEventListener('mouseenter', entrar)
+            a.addEventListener('mouseout', sair)
+        
+            function clicar(){
+                a.innerText = 'Clicou'
+                a.style.background = 'red'
+                a.style.border ='5px dashed black'
+            }
+            function entrar() {
+                a.innerText = 'Entrou'
+            }
+            function sair() {
+                a.innerText = 'Saiu'
+                a.style.background = 'black'
+        
+            }
+        </script>
+    </section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site da Confirmação De Cidadania</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            font: normal 16pt arial;
+        }
+
+        .cid {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Confirmação De Cidadania</h1>
+    Em qual país vc mora? <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            var pais = document.getElementById('pais')
+            var res = document.querySelector('div#res')
+            res.innerHTML = `Você mora em ${pais.value}.`
+            if(pais.value == 'Brasil'){
+                res.innerHTML += `Você é brasileiro!`
+            } else  {
+                res.innerHTML += `Você é estrangeiro` 
+            }
+        }
+    </script>
+</body>
+</html>
