@@ -208,7 +208,7 @@ Por Id    --> getElementById()         // 1 obejto ou 1 familia deles, usar #
 
 Por Nome  --> getElementsByName()      // mais de 1 objeto
 
-quando className usar .
+quando class usar .
 _____________________________________________________________________________
 
 Eventos DOM é tudo aquilo que poça acontecer com essa <div>
